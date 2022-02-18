@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/resumehelper/static/css/main.0ec06415.css",
+    "main.js": "/resumehelper/static/js/main.fb672e8d.js",
+    "static/js/498.dd75e41a.chunk.js": "/resumehelper/static/js/498.dd75e41a.chunk.js",
+    "static/js/703.5e803c04.chunk.js": "/resumehelper/static/js/703.5e803c04.chunk.js",
+    "static/js/587.1b255835.chunk.js": "/resumehelper/static/js/587.1b255835.chunk.js",
+    "static/js/787.61b62c3a.chunk.js": "/resumehelper/static/js/787.61b62c3a.chunk.js",
+    "static/media/YES-Awards-Logo.png": "/resumehelper/static/media/YES-Awards-Logo.b819e4d432da41918213.png",
+    "static/media/logo.svg": "/resumehelper/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/resumehelper/index.html",
+    "main.0ec06415.css.map": "/resumehelper/static/css/main.0ec06415.css.map",
+    "main.fb672e8d.js.map": "/resumehelper/static/js/main.fb672e8d.js.map",
+    "498.dd75e41a.chunk.js.map": "/resumehelper/static/js/498.dd75e41a.chunk.js.map",
+    "703.5e803c04.chunk.js.map": "/resumehelper/static/js/703.5e803c04.chunk.js.map",
+    "587.1b255835.chunk.js.map": "/resumehelper/static/js/587.1b255835.chunk.js.map",
+    "787.61b62c3a.chunk.js.map": "/resumehelper/static/js/787.61b62c3a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ec06415.css",
+    "static/js/main.fb672e8d.js"
+  ]
+}
