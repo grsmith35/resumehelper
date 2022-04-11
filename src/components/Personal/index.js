@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-export default function Personal({ myInfo, setMyInfo }) {
+export default function Personal({ myInfo, setMyInfo, setComplete }) {
     const handleChange = (event) => {
         const { name, value } = event.target;
 
@@ -8,7 +8,15 @@ export default function Personal({ myInfo, setMyInfo }) {
             ...myInfo,
             [name]: value
         })
-    }
+    };
+
+    useEffect(() => {
+        let check = Object.values(myInfo)
+        if(check.every((each) => each !== "")){
+            console.log('checking')
+            setComplete(true)
+        }
+    }, [myInfo])
 
     const states = [
     "Select a State",

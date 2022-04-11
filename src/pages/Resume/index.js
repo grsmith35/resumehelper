@@ -13,8 +13,10 @@ export default function Resume() {
     const [personalInfo, setPersonalInfo] = useState({ fullname: "", address: "", email: "", number: "", city: "", state: "", zip: "" });
     const [currentJob, setCurrentJob] = useState({ company: "", title: "", description: "", startdate: ""});
     const [pastJobs, setPastJobs] = useState([]);
-    const [myEducation, setMyEducation] = useState([])
-    const [mySkills, setMySkills] = useState([])
+    const [myEducation, setMyEducation] = useState([]);
+    const [mySkills, setMySkills] = useState([]);
+    const [personalInfoComplete, setPersonalInfoComplete] = useState(false);
+    const [createEnabled, setCreateEnabled] = useState(false);
     let theFinal = [];
 
     function handleShowBox() {
@@ -51,6 +53,9 @@ export default function Resume() {
     const handleCreate = (event) => {
         event.preventDefault();
         theFinal = [];
+        if(personalInfoComplete) {
+            console.log('complete')
+        }
         theFinal.push(personalInfo, currentJob, pastJobs, myEducation, mySkills);
         var toSend = JSON.stringify(theFinal);
         createResume(toSend);
@@ -64,6 +69,7 @@ export default function Resume() {
                         <Personal 
                             myInfo={personalInfo}
                             setMyInfo={setPersonalInfo}
+                            setComplete={setPersonalInfoComplete}
                         />
                         <div>
                             <h3 className="ml-3">Current Job</h3>
