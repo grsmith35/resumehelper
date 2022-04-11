@@ -22,6 +22,11 @@ export function capitalizeFirstLetter(string) {
    
  }
 
+ async function submitResume(name, email) {
+  const response = await fetch(`api/site/newresume/${name}/${email}`)
+  console.log(response);
+ }
+
  export function createResume(toSend) {
   let currDesc = 0;
   const newStuff = JSON.parse(toSend);
@@ -150,5 +155,6 @@ export function capitalizeFirstLetter(string) {
     }
   }
 
+  submitResume(newStuff[0].fullname, newStuff[0].email);
   doc.save(`${newStuff[0].fullname} resume.pdf`);
 };

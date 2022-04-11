@@ -12,7 +12,7 @@ export default function Payroll({ allSkills, setAllSkills }) {
         const { name, value } = event.target;
         let newArray = allSkills;
         let count = 0;
-        let targeted = newArray.filter(each => each.id == event.target.parentNode.parentNode.id);
+        let targeted = newArray.filter(each => each.id === event.target.parentNode.parentNode.id);
         for(let i = 0; i < newArray.length; i++) {
             if(newArray[i].id === targeted[0].id) {
                 count = i;
