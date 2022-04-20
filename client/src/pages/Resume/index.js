@@ -23,7 +23,7 @@ export default function Resume() {
 
     useEffect(() => {
         let theId = uniqid();
-        setPastJobs(pastJobs => [{id: theId, title: "anything", company: "a company", description: "did work", startdate: "11/12/2020", enddate: "11/21/2020"},]);
+        setPastJobs(pastJobs => [{id: theId, title: "", company: "", description: "", startdate: "", enddate: ""},]);
         let anotherId = uniqid();
         setMyEducation(myEducation => [{id: anotherId, degree: "", school: "", year: ""}]);
         let yetAnotherId = uniqid();
@@ -54,6 +54,12 @@ export default function Resume() {
         theFinal.push(personalInfo, currentJob, pastJobs, myEducation, mySkills);
         var toSend = JSON.stringify(theFinal);
         createResume(toSend);
+        fetch(`/api/post/${personalInfo.name}/${personalInfo.email}`, {
+            method: "post",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
     }
 
     return (

@@ -8,5 +8,11 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "moment": "^2.29.2",
+    "nodemailer": "^6.7.3"
+  }
 }
