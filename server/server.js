@@ -4,6 +4,7 @@ const session = require('express-session');
 const fs = require('fs');
 const moment = require('moment');
 const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -23,15 +24,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/resumehelper/api/site/test", (req, res) => {
     res.send({test: 'test'})
-})
-
-app.get("/api/site/newresume/:name/:email", (req, res) => {
-    console.log('server hit');
-    console.log(req.params.email, req.params.name);
-
 });
 
-app.post('/api/post/:name/:email', (req, res) => {
+const hello = () => {
+  console.log('in here')
+};
+
+const checkTime = () => {
+  setInterval(hello, 5000);
+};
+checkTime();
+
+app.post('/resumehelper/api/post/:name/:email', (req, res) => {
     fs.readFile(path.join(__dirname, '../db/db.json'), (err, data) => {
         if(err) throw err;
         let apps = JSON.parse(data);

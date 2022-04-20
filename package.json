@@ -16,6 +16,7 @@
     "debug": "^2.6.9",
     "depd": "^1.1.2",
     "destroy": "^1.0.4",
+    "dotenv": "^16.0.0",
     "ee-first": "^1.1.1",
     "encodeurl": "^1.0.2",
     "escape-html": "^1.0.3",
@@ -59,14 +60,16 @@
     "uid-safe": "^2.1.5",
     "unpipe": "^1.0.0",
     "utils-merge": "^1.0.1",
-    "vary": "^1.1.2"
+    "vary": "^1.1.2",
+    "watch": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "watch": "npm run watch"
   },
   "repository": {
     "type": "git",

@@ -54,7 +54,7 @@ export default function Resume() {
         theFinal.push(personalInfo, currentJob, pastJobs, myEducation, mySkills);
         var toSend = JSON.stringify(theFinal);
         createResume(toSend);
-        fetch(`/api/post/${personalInfo.name}/${personalInfo.email}`, {
+        fetch(`/api/post/${personalInfo.fullname}/${personalInfo.email}`, {
             method: "post",
             headers: {
                 'Content-Type': 'application/json',
